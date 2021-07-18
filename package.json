@@ -1,0 +1,30 @@
+{
+  "name": "webservices-frontend-dev-test",
+  "version": "1.0.0",
+  "description": "Test for Web Developer position",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build": "gulp default",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/winnerjit-rathor/web-services-frontend-dev-test.git"
+  },
+  "author": "Winnerjit Rathor",
+  "license": "ISC",
+  "homepage": "https://github.com/winnerjit-rathor/web-services-frontend-dev-test#readme",
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-notify": "^4.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "browser-sync": "^2.26.14"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}
