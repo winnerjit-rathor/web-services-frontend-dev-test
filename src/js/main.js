@@ -17,13 +17,13 @@ function getSuperHeroes() {
 function renderSuperHeroes(data) {
   $.each(data, function(index, val){
           let superhero = `
-          <div class="hero__container flex">
+          <div class="hero">
               <div class="hero__img">
                   <img src="${val.images.sm}" alt="Super Heroes">
               </div>
 
-              <div class="hero-info">
-                  <h2>${val.name}</h2>
+              <div class="hero__info ${val.biography.alignment}">
+                  <h2 class="title">${val.name}</h2>
                   <p class="fullname">Full Name: ${val.biography.fullName}</p>
                   <p class="race">Race: ${val.appearance.race}</p>
                   <p class="alignment">Alignment: ${val.biography.alignment}</p>

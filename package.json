@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "build": "gulp default",
+    "style": "gulp scss",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
