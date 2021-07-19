@@ -11,4 +11,4 @@ function getSuperHeroes(){$.ajax({url:"https://cdn.jsdelivr.net/gh/akabab/superh
                   <p class="alignment">Alignment: ${a.biography.alignment}</p>
                   <p class="publisher">Publisher: ${a.biography.publisher}</p>
               </div>
-          </div>`;$("#suphero-list").append(a)})}$(function(){getSuperHeroes()});
+          </div>`;$("#hero-container").append(a)})}function nameLiveSearch(e){setTimeout(function(){filterByName(e.target.value)},500)}function filterByName(t){$.each($(".hero"),function(e,a){let n=$(a).find(".title").text();n=n.toLowerCase(),n.includes(t.trim().toLowerCase())?$(a).show():$(a).hide()})}$(function(){getSuperHeroes();const a=document.querySelector("#name");a.addEventListener("change",nameLiveSearch),a.addEventListener("keyup",nameLiveSearch),$("form").on("submit",function(e){e.preventDefault(),filterByName(a.value)})});

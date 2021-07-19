@@ -30,12 +30,40 @@ function renderSuperHeroes(data) {
                   <p class="publisher">Publisher: ${val.biography.publisher}</p>
               </div>
           </div>`;
-      $('#suphero-list').append(superhero);
+      $('#hero-container').append(superhero);
   });
+}
 
-  
+function nameLiveSearch(e) {
+  var delayInMilliseconds = 500; //0.5 second
+  setTimeout(function() {
+    filterByName(e.target.value);
+  }, delayInMilliseconds);
+}
+
+function filterByName(inputName) {
+  $.each($(".hero"), function(index, hero){
+    let title_text = $(hero).find(".title").text();
+    title_text = title_text.toLowerCase();
+    if(title_text.includes(inputName.trim().toLowerCase())) {
+      $(hero).show();
+    } else {
+      $(hero).hide();
+    }
+  });
 }
 
 $(function(){
+
   getSuperHeroes();
+  
+  const name_input = document.querySelector('#name');
+  name_input.addEventListener('change', nameLiveSearch);
+  name_input.addEventListener("keyup", nameLiveSearch);
+
+  $("form").on("submit", function(e){
+    e.preventDefault();
+    filterByName(name_input.value);
+  });
+
 });

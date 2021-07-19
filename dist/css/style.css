@@ -52,6 +52,13 @@ body {
   border-radius: 10px;
   padding: 25px 20px;
   box-sizing: border-box; }
+  .suphero-list input {
+    border: 1px solid #dfdfdf;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box; }
   .suphero-list .hero {
     width: 100%;
     border: 1px solid #dfdfdf;
